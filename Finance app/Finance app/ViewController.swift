@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController, UITabBarControllerDelegate {
-    @IBOutlet weak var hmmTabBar: UITabBar!
     
     
     override func viewDidLoad() {
