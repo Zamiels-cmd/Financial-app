@@ -380,7 +380,7 @@
         <!--Home-->
         <scene sceneID="2Kj-d0-USk">
             <objects>
-                <viewController id="qSl-11-RtA" sceneMemberID="viewController">
+                <viewController id="qSl-11-RtA" customClass="Home" customModule="Finance_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1pZ-Mf-yHY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -496,6 +496,9 @@
                         <viewLayoutGuide key="safeArea" id="foX-Jw-yAa"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homeIcon" id="Obn-eC-d22"/>
+                    <connections>
+                        <outlet property="recentTransactions" destination="6IP-lf-f0M" id="UTp-5K-RFI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ooe-7c-6Ef" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
