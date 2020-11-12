@@ -160,7 +160,6 @@
                             <constraint firstItem="ZDb-Ve-tce" firstAttribute="top" secondItem="yuZ-tw-U2x" secondAttribute="bottom" constant="97" id="tKk-fB-bs2"/>
                             <constraint firstItem="7le-aL-xjr" firstAttribute="leading" secondItem="ZDb-Ve-tce" secondAttribute="trailing" constant="19" id="zVG-h2-kP0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Charts" image="chartIcon" id="ycW-Q3-xhH"/>
                 </viewController>
