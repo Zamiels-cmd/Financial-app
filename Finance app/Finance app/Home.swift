@@ -8,12 +8,12 @@
 
 import UIKit
 
-class Home: UIViewController, UITabBarControllerDelegate, UITableViewDelegate, UITableViewDataSource {
+class Home: UIViewController, UITabBarControllerDelegate, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    private func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recentTransactionsCell", for: indexPath)
         
         cell.textLabel!.text = "Transaction"
@@ -21,13 +21,11 @@ class Home: UIViewController, UITabBarControllerDelegate, UITableViewDelegate, U
     }
     
     
-    
     @IBOutlet weak var recentTransactions: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         recentTransactions.delegate = self
-        recentTransactions.dataSource = self
         recentTransactions.layer.cornerRadius = 10 //set corner radius here
     }
     
