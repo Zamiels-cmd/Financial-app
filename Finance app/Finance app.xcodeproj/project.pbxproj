@@ -76,11 +76,11 @@
 				3F5F97EA25630EF700B683E0 /* Catagories.swift */,
 				3F5F97EC25630F7C00B683E0 /* NewItem.swift */,
 				3F5F97EE25630FC200B683E0 /* ProfileView.swift */,
+				3F5F97F02563100300B683E0 /* GraphView.swift */,
 				3FBA3E72255BA075005C19AD /* Main.storyboard */,
 				3FBA3E75255BA077005C19AD /* Assets.xcassets */,
 				3FBA3E7A255BA077005C19AD /* Info.plist */,
 				3F5B7A76255CCC71005AE8BF /* LaunchScreen.storyboard */,
-				3F5F97F02563100300B683E0 /* GraphView.swift */,
 			);
 			path = "Finance app";
 			sourceTree = "<group>";
