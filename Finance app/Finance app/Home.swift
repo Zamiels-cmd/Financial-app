@@ -9,6 +9,7 @@
 import UIKit
 
 class Home: UIViewController, UITabBarControllerDelegate, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -22,6 +23,11 @@ class Home: UIViewController, UITabBarControllerDelegate, UITableViewDelegate {
     
     
     @IBOutlet weak var recentTransactions: UITableView!
+    
+    @IBOutlet weak var balance: UILabel!
+    @IBOutlet weak var currentMonth: UILabel!
+    @IBOutlet weak var income: UILabel!
+    @IBOutlet weak var expense: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

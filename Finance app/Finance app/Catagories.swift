@@ -12,8 +12,6 @@ class Catagories: UIViewController, UITabBarControllerDelegate, UITableViewDeleg
 
 
     @IBOutlet weak var AddCatagory: UIButton!
-    
-
     @IBOutlet weak var CatagoryDisplay: UITableView!
     
     

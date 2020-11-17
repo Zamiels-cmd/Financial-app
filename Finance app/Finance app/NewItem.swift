@@ -26,6 +26,14 @@ class NewItem: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func removeItem(itemID: Int) -> Void {
+        // search through an array of item IDs and remove the requested ID
+    }
+    
+    func addItem(deposit: Int?, withdrawl: Int?, income: Int?, expense: Int?) -> Void {
+        // Update neccessary fields with any values input by user
+    }
+    
 
     /*
     // MARK: - Navigation

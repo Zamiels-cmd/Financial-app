@@ -209,7 +209,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Profile: {profileName}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfW-xc-yt3">
-                                <rect key="frame" x="178" y="152" width="225" height="21"/>
+                                <rect key="frame" x="165" y="152" width="229" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -242,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mib-gn-pvP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="494" y="791"/>
+            <point key="canvasLocation" x="492.75362318840581" y="790.84821428571422"/>
         </scene>
         <!--New Item-->
         <scene sceneID="uf8-8v-7RU">
@@ -605,6 +605,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homeIcon" id="Obn-eC-d22"/>
                     <connections>
+                        <outlet property="balance" destination="qjR-g0-1Vo" id="aRf-5U-CB7"/>
+                        <outlet property="currentMonth" destination="sgb-Oj-lf3" id="ibi-7C-Aa1"/>
+                        <outlet property="expense" destination="myN-Wd-HUw" id="KEw-qY-5sw"/>
+                        <outlet property="income" destination="h2y-Qc-qPI" id="kWd-Qe-2B2"/>
                         <outlet property="recentTransactions" destination="qPQ-Wr-ZiP" id="Llb-La-9Qe"/>
                     </connections>
                 </viewController>
