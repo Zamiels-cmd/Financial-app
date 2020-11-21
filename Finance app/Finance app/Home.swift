@@ -8,20 +8,9 @@
 
 import UIKit
 
-class Home: UIViewController, UITabBarControllerDelegate, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    private func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "recentTransactionsCell", for: indexPath)
-        
-        cell.textLabel!.text = "Transaction"
-        return cell
-    }
-    
-    
+class Home: UIViewController, UITabBarControllerDelegate, UITableViewDelegate, UITableViewDataSource {
+
+
     @IBOutlet weak var recentTransactions: UITableView!
     
     @IBOutlet weak var balance: UILabel!
@@ -32,10 +21,33 @@ class Home: UIViewController, UITabBarControllerDelegate, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         recentTransactions.delegate = self
+        recentTransactions.dataSource = self
         recentTransactions.layer.cornerRadius = 10 //set corner radius here
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        recentTransactions.reloadData()
+        income.text = String(Profile.income)
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Profile.ledger.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recentTransactionsCell", for: indexPath)
+        
+        cell.textLabel!.numberOfLines = 0;
+        
+        cell.textLabel!.text = "Deposit: \(String(Profile.ledger[indexPath.row].deposit ?? 0))\nWithdrawls: \(String(Profile.ledger[indexPath.row].withdrawl ?? 0))"
+
+        return cell
+    }
 
 }
 

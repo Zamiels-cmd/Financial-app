@@ -25,13 +25,13 @@ class GraphView: UIViewController {
         // Do any additional setup after loading the view.
         let barrier=BackGround.bounds.size.height
         
-        let maxAmount=max(Profile.getTotalIncome,Profile.getTotalWithdrawls,LastProfile.getTotalWithdrawls,LastProfile.getTotalIncome)
+        let maxAmount=max(Profile.getTotalIncome,Profile.getTotalWithdrawls,lastProfile.getTotalWithdrawls,lastProfile.getTotalIncome)
         
-        ExpenseLastMonth.heightAnchor.constraint(equalToConstant: barrier*CGFloat(LastProfile.getTotalWithdrawls/maxAmount)).isActive=true
+        ExpenseLastMonth.heightAnchor.constraint(equalToConstant: barrier*CGFloat(lastProfile.getTotalWithdrawls/maxAmount)).isActive=true
         
         ExpenseThisMonth.heightAnchor.constraint(equalToConstant: barrier*CGFloat(Profile.getTotalWithdrawls/maxAmount)).isActive=true
         
-        IncomeLastMonth.heightAnchor.constraint(equalToConstant: barrier*CGFloat(LastProfile.getTotalIncome/maxAmount)).isActive=true
+        IncomeLastMonth.heightAnchor.constraint(equalToConstant: barrier*CGFloat(lastProfile.getTotalIncome/maxAmount)).isActive=true
         
         IncomeThisMonth.heightAnchor.constraint(equalToConstant: barrier*CGFloat(Profile.getTotalIncome/maxAmount)).isActive=true
     
