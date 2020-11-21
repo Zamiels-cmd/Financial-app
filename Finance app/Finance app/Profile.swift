@@ -14,7 +14,7 @@ struct Item {
 }
 
 
-class Profile: NSObject {    
+class Profile: NSObject {
     
     override init() {
         super.init()
@@ -34,8 +34,11 @@ class Profile: NSObject {
 
 }
 
-class LastProfile: NSObject {
-    
+class lastProfile: NSObject {
+    struct Item {
+        var deposit:Int!
+        var withdrawl:Int!
+    }
     
     override init() {
         super.init()
@@ -49,8 +52,6 @@ class LastProfile: NSObject {
     static let getCash=ledger.reduce(0, {x,y in x+y.deposit-y.withdrawl})+income-expense
     static let getTotalWithdrawls=ledger.reduce(0, {x,y in x+y.withdrawl})
     static let getTotalIncome=ledger.reduce(0,{x,y in x+y.deposit})
-    
-    
     
 
 }
