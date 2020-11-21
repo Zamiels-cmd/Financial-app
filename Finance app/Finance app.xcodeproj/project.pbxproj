@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3F5B7A77255CCC71005AE8BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5B7A76255CCC71005AE8BF /* LaunchScreen.storyboard */; };
 		3F5F97E925630E8A00B683E0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F97E825630E8A00B683E0 /* Profile.swift */; };
-		3F5F97EB25630EF700B683E0 /* Catagories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F97EA25630EF700B683E0 /* Catagories.swift */; };
 		3F5F97ED25630F7C00B683E0 /* NewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F97EC25630F7C00B683E0 /* NewItem.swift */; };
 		3F5F97EF25630FC200B683E0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F97EE25630FC200B683E0 /* ProfileView.swift */; };
 		3F5F97F12563100300B683E0 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F97F02563100300B683E0 /* GraphView.swift */; };
@@ -24,7 +23,6 @@
 /* Begin PBXFileReference section */
 		3F5B7A76255CCC71005AE8BF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F5F97E825630E8A00B683E0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		3F5F97EA25630EF700B683E0 /* Catagories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catagories.swift; sourceTree = "<group>"; };
 		3F5F97EC25630F7C00B683E0 /* NewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItem.swift; sourceTree = "<group>"; };
 		3F5F97EE25630FC200B683E0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3F5F97F02563100300B683E0 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 				3FBA3E6E255BA075005C19AD /* SceneDelegate.swift */,
 				3FBA3E70255BA075005C19AD /* ViewController.swift */,
 				DDC6AC2A255BE2DD00D8BE10 /* Home.swift */,
-				3F5F97EA25630EF700B683E0 /* Catagories.swift */,
 				3F5F97EC25630F7C00B683E0 /* NewItem.swift */,
 				3F5F97EE25630FC200B683E0 /* ProfileView.swift */,
 				3F5F97F02563100300B683E0 /* GraphView.swift */,
@@ -164,7 +161,6 @@
 				3F5F97ED25630F7C00B683E0 /* NewItem.swift in Sources */,
 				DDC6AC2B255BE2DD00D8BE10 /* Home.swift in Sources */,
 				3FBA3E6F255BA075005C19AD /* SceneDelegate.swift in Sources */,
-				3F5F97EB25630EF700B683E0 /* Catagories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

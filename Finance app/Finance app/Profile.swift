@@ -19,7 +19,6 @@ class Profile: NSObject {
     }
     
     public static var name:String=""
-    public static var catagories:[String]=[]
     public static var ledger:[Item]=[]
     public static var income:Int=0
     public static var expense:Int=0
@@ -29,15 +28,6 @@ class Profile: NSObject {
     static let getCash=ledger.reduce(0, {x,y in x+y.deposit-y.withdrawl})+income-expense
     static let getTotalWithdrawls=ledger.reduce(0, {x,y in x+y.withdrawl})
     static let getTotalIncome=ledger.reduce(0,{x,y in x+y.deposit})
-    static func merge(config:[String]){
-        for catagory in config
-        {
-            if catagories.contains(catagory)==false
-            {
-                catagories.append(catagory)
-            }
-        }
-    }
     
 
 }
@@ -53,25 +43,9 @@ class lastProfile: NSObject {
     }
     
     public static var name:String=""
-    public static var catagories:[String]=[]
     public static var ledger:[Item]=[]
     public static var income:Int=0
     public static var expense:Int=0
-    
-    
-    
-    static let getCash=ledger.reduce(0, {x,y in x+y.deposit-y.withdrawl})+income-expense
-    static let getTotalWithdrawls=ledger.reduce(0, {x,y in x+y.withdrawl})
-    static let getTotalIncome=ledger.reduce(0,{x,y in x+y.deposit})
-    static func merge(config:[String]){
-        for catagory in config
-        {
-            if catagories.contains(catagory)==false
-            {
-                catagories.append(catagory)
-            }
-        }
-    }
     
 
 }
