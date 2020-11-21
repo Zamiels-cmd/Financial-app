@@ -17,14 +17,25 @@ class GraphView: UIViewController {
     @IBOutlet weak var ExpenseThisMonth: UILabel!
     @IBOutlet weak var IncomeThisMonth: UILabel!
     
+    @IBOutlet weak var BackGround: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
+        let barrier=BackGround.bounds.size.height
+        
+        let maxAmount=max(Profile.getTotalIncome,Profile.getTotalWithdrawls,LastProfile.getTotalWithdrawls,LastProfile.getTotalIncome)
+        
+        ExpenseLastMonth.heightAnchor.constraint(equalToConstant: barrier*CGFloat(LastProfile.getTotalWithdrawls/maxAmount)).isActive=true
+        
+        ExpenseThisMonth.heightAnchor.constraint(equalToConstant: barrier*CGFloat(Profile.getTotalWithdrawls/maxAmount)).isActive=true
+        
+        IncomeLastMonth.heightAnchor.constraint(equalToConstant: barrier*CGFloat(LastProfile.getTotalIncome/maxAmount)).isActive=true
+        
+        IncomeThisMonth.heightAnchor.constraint(equalToConstant: barrier*CGFloat(Profile.getTotalIncome/maxAmount)).isActive=true
     
-
+    }
     /*
     // MARK: - Navigation
 
@@ -34,5 +45,4 @@ class GraphView: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

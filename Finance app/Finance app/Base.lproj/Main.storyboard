@@ -125,6 +125,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Charts" image="chartIcon" id="ycW-Q3-xhH"/>
                     <connections>
+                        <outlet property="BackGround" destination="n8K-4i-x7e" id="fXq-oK-uSq"/>
                         <outlet property="ExpenseLastMonth" destination="dmI-1z-te1" id="oPQ-nt-So8"/>
                         <outlet property="ExpenseThisMonth" destination="P8N-ir-kCw" id="cGz-Ti-ese"/>
                         <outlet property="IncomeLastMonth" destination="7le-aL-xjr" id="m6P-zq-eoE"/>
