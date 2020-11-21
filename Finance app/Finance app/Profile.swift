@@ -35,10 +35,6 @@ class Profile: NSObject {
 }
 
 class lastProfile: NSObject {
-    struct Item {
-        var deposit:Int!
-        var withdrawl:Int!
-    }
     
     override init() {
         super.init()
