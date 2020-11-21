@@ -28,6 +28,7 @@ class Home: UIViewController, UITabBarControllerDelegate, UITableViewDelegate, U
     override func viewWillAppear(_ animated: Bool) {
         recentTransactions.reloadData()
         income.text = String(Profile.income)
+        expense.text = String(Profile.expense)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
