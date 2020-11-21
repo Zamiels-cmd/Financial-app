@@ -34,7 +34,7 @@ class Profile: NSObject {
 
 }
 
-class LastProfile: NSObject {
+public class LastProfile: NSObject {
     
     override init() {
         super.init()
