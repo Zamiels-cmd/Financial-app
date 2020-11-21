@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Item {
+public struct Item {
     var deposit:Double!
     var withdrawl:Double!
 }
