@@ -8,11 +8,13 @@
 
 import UIKit
 
-class Profile: NSObject {
-    struct Item {
-        var deposit:Int!
-        var withdrawl:Int!
-    }
+struct Item {
+    var deposit:Double!
+    var withdrawl:Double!
+}
+
+
+class Profile: NSObject {    
     
     override init() {
         super.init()
@@ -20,8 +22,8 @@ class Profile: NSObject {
     
     public static var name:String=""
     public static var ledger:[Item]=[]
-    public static var income:Int=0
-    public static var expense:Int=0
+    public static var income:Double=0
+    public static var expense:Double=0
     
     
     
@@ -32,11 +34,8 @@ class Profile: NSObject {
 
 }
 
-class lastProfile: NSObject {
-    struct Item {
-        var deposit:Int!
-        var withdrawl:Int!
-    }
+class LastProfile: NSObject {
+    
     
     override init() {
         super.init()
@@ -44,8 +43,14 @@ class lastProfile: NSObject {
     
     public static var name:String=""
     public static var ledger:[Item]=[]
-    public static var income:Int=0
-    public static var expense:Int=0
+    public static var income:Double=0
+    public static var expense:Double=0
+    
+    static let getCash=ledger.reduce(0, {x,y in x+y.deposit-y.withdrawl})+income-expense
+    static let getTotalWithdrawls=ledger.reduce(0, {x,y in x+y.withdrawl})
+    static let getTotalIncome=ledger.reduce(0,{x,y in x+y.deposit})
+    
+    
     
 
 }
