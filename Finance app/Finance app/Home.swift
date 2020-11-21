@@ -29,6 +29,7 @@ class Home: UIViewController, UITabBarControllerDelegate, UITableViewDelegate, U
         recentTransactions.reloadData()
         income.text = String(Profile.income)
         expense.text = String(Profile.expense)
+        balance.text = String(Profile.getCash)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
