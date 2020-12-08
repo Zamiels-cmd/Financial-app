@@ -11,6 +11,8 @@ import UIKit
 public struct Item {
     var deposit:Double!
     var withdrawl:Double!
+    var income:Double!
+    var expense:Double!
 }
 
 
@@ -24,6 +26,7 @@ class Profile: NSObject {
     public static var ledger:[Item]=[]
     public static var income:Double=0
     public static var expense:Double=0
+    public static var deposit:Double=0
     
     
     

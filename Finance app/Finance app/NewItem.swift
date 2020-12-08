@@ -29,20 +29,20 @@ class NewItem: UIViewController {
     }
     
     func removeItem(itemID: Int) -> Void {
-//        GlobalVariables.items.remove(at: itemID)
+        Profile.ledger.remove(at: Int(RemoveItemID.text!) ?? -1)
     }
     
-    func addItem(deposit: Int?, withdrawl: Int?) -> Void {
-        Profile.ledger.append(Item(deposit: Double(DepositInput.text!), withdrawl: Double(WithdrawlInput.text!)))
+    func addItem(deposit: Int?, withdrawl: Int?, income: Int?, expense: Int?) -> Void {
+        Profile.ledger.append(Item(deposit: Double(DepositInput.text!) ?? 0, withdrawl: Double(WithdrawlInput.text!) ?? 0, income: Double(IncomeInput.text!) ?? 0, expense: Double(ExpenseInput.text!) ?? 0))
     }
     
     
     @IBAction func acceptButtonClick(_ sender: Any) {
         
-        addItem(deposit: Int(DepositInput.text!), withdrawl: Int(WithdrawlInput.text!))
+        addItem(deposit: Int(DepositInput.text!) ?? 0, withdrawl: Int(WithdrawlInput.text!) ?? 0, income: Int(IncomeInput.text!) ?? 0, expense: Int(ExpenseInput.text!) ?? 0 )
 
-        Profile.income = Profile.income + Double(IncomeInput.text!)!
-        Profile.expense = Profile.expense + Double(ExpenseInput.text!)!
+        Profile.income = Profile.income + (Double(IncomeInput.text!) ?? 0) + (Double(DepositInput.text!) ?? 0)
+        Profile.expense = Profile.expense + (Double(ExpenseInput.text!) ?? 0)
 
         DepositInput.text = ""
         WithdrawlInput.text = ""
@@ -55,34 +55,5 @@ class NewItem: UIViewController {
 
         self.present(alertController, animated: true, completion: nil)
     }
-    
-//    @IBAction func acceptButtonClicked(_ sender: Any) {
-//        addItem(deposit: Int(DepositInput.text!), withdrawl: Int(WithdrawlInput.text!))
-//
-//        Profile.income = Profile.income + Double(IncomeInput.text!)!
-//        Profile.expense = Profile.expense + Double(ExpenseInput.text!)!
-//
-//        DepositInput.text = ""
-//        WithdrawlInput.text = ""
-//        IncomeInput.text = ""
-//        ExpenseInput.text = ""
-//
-//        let alertController = UIAlertController(title: "Item Added", message:
-//            "Go see it in your Home Tab!", preferredStyle: .alert)
-//        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-//
-//        self.present(alertController, animated: true, completion: nil)
-//    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

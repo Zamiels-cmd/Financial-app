@@ -46,7 +46,7 @@ class Home: UIViewController, UITabBarControllerDelegate, UITableViewDelegate, U
         
         cell.textLabel!.numberOfLines = 0;
         
-        cell.textLabel!.text = "Deposit: \(String(Profile.ledger[indexPath.row].deposit ?? 0))\nWithdrawls: \(String(Profile.ledger[indexPath.row].withdrawl ?? 0))"
+        cell.textLabel!.text = "Deposit: \(String(Profile.ledger[indexPath.row].deposit ?? 0))\nWithdrawls: \(String(Profile.ledger[indexPath.row].withdrawl ?? 0))\nIncome: \(String(Profile.ledger[indexPath.row].income ?? 0))\nExpense: \(String(Profile.ledger[indexPath.row].expense ?? 0))"
 
         return cell
     }
